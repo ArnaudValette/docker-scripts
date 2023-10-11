@@ -1,7 +1,7 @@
 * Docker-scripts
 Build, run, remove images, start, stop and remove containers.
-Tired of the dockerCLI syntax, I decided to make some bash scripts to handle
-most of the common use cases I encounter.
+Tired of the dockerCLI syntax, I decided to make some /good-enough/ bash scripts to handle
+most of the common use cases I encounter. 
 
 ** Docker-run
 
