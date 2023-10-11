@@ -1,1 +1,25 @@
 * Docker-scripts
+Build, run, remove images, start, stop and remove containers.
+Tired of the dockerCLI syntax, I decided to make some bash scripts to handle
+most of the common use cases I encounter.
+
+** Docker-run
+
+/dockerrun.sh/ gives you a list of the current available images on your local machine,
+upon selection the image is run into a container.
+You can pass any argument that is compatible with =docker run=.
+
+** Docker-remove-container, docker-kill, docker-remove-image, docker-start
+
+Same as above, the prompts you with a list of available images/containers
+that you want to remove/kill/start.
+
+** Docker-build
+
+It should be run from inside a folder with a Dockerfile, the script simply calls:
+: $ docker build -t <name> . && docker run -p <port> <name>
+
+You have two flags to set: =-n <name>= and the occasionnal =-p <port>= which is defaulted to 3000:3000.
+I usually alias it to =dcb=, usage is then:
+: $ dcb -n <name> -p 3123:3000
+
